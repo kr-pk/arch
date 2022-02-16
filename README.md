@@ -1,0 +1,6 @@
+# arch
+It's My Installer Scripts Of Arch For Dwm....
+
+This Shell Script's Codes Are Copied From Bugswriter/arch-linux-magic/arch-linux-magic.sh....
+
+But, I Modified His Scripts for UEFI Installation
