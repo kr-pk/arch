@@ -22,7 +22,7 @@ if [[ $answerswap = y ]] ; then
   swapon $swappartition
 fi
 mount $partition /mnt 
-pacstrap /mnt base base-devel linux linux-firmware sudo vim vi vim-runtime git wget sudo
+pacstrap /mnt base base-devel linux linux-firmware linux-headers sudo vim vi vim-runtime git wget sudo
 genfstab -U -p /mnt >> /mnt/etc/fstab
 sed '1,/^#part2$/d' `basename $0` > /mnt/arch_install2.sh
 chmod +x /mnt/arch_install2.sh
@@ -54,7 +54,7 @@ grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 
 pacman -S xorg-server xorg-xinit xorg-xkill xorg-xsetroot xorg-xbacklight xorg-xprop xorg-xrandr \
-	gvfs noto-fonts noto-fonts-emoji noto-fonts-cjk ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
+	gvfs noto-fonts noto-fonts-emoji noto-fonts-cjk ttf-hack ttf-joypixels ttf-font-awesome \
 	sxiv mpv mpd ncmpcpp zathura zathura-pdf-mupdf ffmpeg imagemagick \
 	fzf man-db xwallpaper python-pywal yt-dlp picom unclutter xclip maim \
         zip unzip unrar tar p7zip xdotool brightnessctl \
@@ -64,13 +64,14 @@ pacman -S xorg-server xorg-xinit xorg-xkill xorg-xsetroot xorg-xbacklight xorg-x
         dhcpcd networkmanager rsync pamixer \
         zsh-syntax-highlighting zsh-completions xdg-user-dirs virtualbox-guest-utils
 
-systemctl enable NetworkManager.service 
+systemctl enable NetworkManager.service
+systemctl enable vboxservice.service
 rm /bin/sh
 ln -s dash /bin/sh
 echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 echo "Enter Username: "
 read username
-useradd -m -G wheel,audio,video,storage,optical -s /bin/zsh $username
+useradd -m -G wheel,audio,video,storage,optical,vboxsf -s /bin/zsh $username
 passwd $username
 
 ai3_path=/home/$username/arch_install3.sh
