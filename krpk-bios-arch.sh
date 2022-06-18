@@ -57,7 +57,7 @@ sed -i 's/GRUB_TIMEOUT=5/GRUB_TIMEOUT=0/g' /etc/default/grub
 grub-mkconfig -o /boot/grub/grub.cfg
 
 pacman -S xorg-server xorg-xinit xorg-xkill xorg-xsetroot xorg-xbacklight xorg-xprop xorg-xrandr gvfs \
-     noto-fonts noto-fonts-emoji noto-fonts-cjk ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
+     noto-fonts noto-fonts-emoji noto-fonts-cjk ttf-hack ttf-joypixels ttf-font-awesome \
      sxiv mpv mpd ncmpcpp zathura zathura-pdf-mupdf ffmpeg imagemagick \
      fzf man-db xwallpaper python-pywal yt-dlp unclutter xclip maim \
      zip unzip unrar tar p7zip xdotool brightnessctl \
