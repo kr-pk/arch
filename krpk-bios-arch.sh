@@ -58,7 +58,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 pacman -S xorg-server xorg-xinit xorg-xkill xorg-xsetroot xorg-xbacklight xorg-xprop xorg-xrandr gvfs \
      noto-fonts noto-fonts-emoji noto-fonts-cjk ttf-hack ttf-joypixels ttf-font-awesome \
-     sxiv mpv mpd ncmpcpp zathura zathura-pdf-mupdf ffmpeg imagemagick \
+     sxiv mpv mpd mpc ncmpcpp zathura zathura-pdf-mupdf ffmpeg imagemagick \
      fzf man-db xwallpaper python-pywal yt-dlp unclutter xclip maim \
      zip unzip unrar tar p7zip xdotool brightnessctl \
      dosfstools ntfs-3g git sxhkd zsh pipewire pipewire-pulse \
