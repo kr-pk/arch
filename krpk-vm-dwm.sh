@@ -2,7 +2,7 @@ printf '\033c'
 echo "\n....Welcome To Kr. PK's DWM Installer Script For ARCH....\n"
 
 sudo pacman -S xorg-server xorg-xinit xorg-xkill xorg-xsetroot xorg-xbacklight xorg-xprop xorg-xrandr \
-	gvfs noto-fonts noto-fonts-emoji noto-fonts-cjk ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
+	gvfs noto-fonts noto-fonts-emoji noto-fonts-cjk ttf-hack ttf-joypixels ttf-font-awesome \
 	sxiv mpv mpd ncmpcpp zathura zathura-pdf-mupdf ffmpeg imagemagick  \
 	fzf man-db xwallpaper python-pywal yt-dlp picom unclutter xclip maim \
         zip unzip unrar tar p7zip xdotool brightnessctl  \
